@@ -85,7 +85,7 @@ def time_stats(df):
     common_hour = df['hour'].mode()[0]
     print('The most popular hour to travel is:', common_hour)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis operation took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 def station_stats(df):
@@ -106,7 +106,7 @@ def station_stats(df):
     common_trip = df['start_end'].mode()[0]
     print('The most popular trip is:', common_trip)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis operation took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -125,7 +125,7 @@ def trip_duration_stats(df):
     mean_travel_time = df['Trip Duration'].mean()
     print('The mean trip duration is:', format((mean_travel_time), '.2f'), " seconds")
     
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis operation took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
@@ -160,7 +160,7 @@ def user_stats(df):
     else: 
         print('Birth Year information not available')
         
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print("\nThis operation took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 def print_data(df):

@@ -2,12 +2,10 @@ import time
 import pandas as pd
 import numpy as np
 
-
 #global constants
 CHICARGO = "chicago.csv"
 WASHINGTON = "washington.csv"
 NEW_YORK_CITY = "new_york_city.csv"
-
 
 CITY_DATA = { 'chicago': CHICARGO,
               'new york city': WASHINGTON,
@@ -41,7 +39,6 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-
 def load_data(city, month, day):
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
@@ -67,9 +64,7 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
-
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -92,7 +87,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -197,7 +191,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
